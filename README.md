@@ -51,3 +51,34 @@ HMM try to combine all possibility of Tags
         VERB VERB VERB VERB
 Each of these combination will have a different "SCORE"
 The algorithm will choose the best combination which has a "HIGHEST SCORE"
+
+
+How to Compute "THIS SCORE" ?
+
+If you want to know how to get this formula, please read:
+
+        http://www.cs.columbia.edu/~mcollins/courses/nlp2011/notes/hmms.pdf
+
+So, I only try to explain the code...
+
+According to the formula, We need to compute two main probability  q(s|u,v) and e(x|s)
+
+where q(s|u,v) :
+
+        count(u,v,s)/count(u,v)
+
+and e(x|s):
+
+        count(x,s)/count(s)
+
+I add two small Laplace smoothing for some reasons:
+
+1/ Smoothing for q(s|u,v): We will try to combine all possibility. So it easily to have a combination that have count(u,v,s)=0
+
+2/ Smoothing for e(x,s): x is a word, so probability that count(x,s)=0 will very high
+
+
+Instead of trying to combine all possibility, we use Dynamic programming technique
+For this problem, author propose Dynamic programming method called  Viterbi Algorithm
+
+The rest of the code is interpreted from the paper.
