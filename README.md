@@ -9,6 +9,7 @@ FOR MORE INFORMATION ABOUT HOW TO WRITE THIS CODE BY YOURSELVES, PLEASE READ:
         (HOWEVER, I WILL TRY TO EXPLAIN TO YOU WHAT I AM WRITTING)
 
 What is HMM ?
+
 Hidden Markov Model is a Sequence Classifier (a classifier which depend on context of words in each sentences, ex: previous word, the word after, label of words around the one we considering,... )
 Sequence Classifier opposite with Affix classifier, which only depend on morphology of each words (ex: last character, first character, how many vowels in this word)
 
