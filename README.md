@@ -41,13 +41,13 @@ EX:
         Output-> Det NOUN ADVERB    VERB   VERB TO VERB
 
 HERE IS HOW HMM ALGORITHM:
-HMM try to combine all possibility of Tags (
-    
-    ex: if there are three main tags NOUN ADJ VERB, and the sentence have 4 character
-    It will try to combine all possibility : NOUN NOUN NOUN NOUN,
-                                             NOUN NOUN NOUN VERB,
-                                             NOUN VERB NOUN NOUN,
-                                             ...
-                                             VERB VERB VERB VERB)
+HMM try to combine all possibility of Tags 
+        ex: if there are three main tags NOUN ADJ VERB, and the sentence have 4 character.It will try to combine all possibility : 
+        
+        NOUN NOUN NOUN NOUN,
+        NOUN NOUN NOUN VERB,
+        NOUN VERB NOUN NOUN,
+        ...
+        VERB VERB VERB VERB
 Each of these combination will have a different "SCORE"
 The algorithm will choose the best combination which has a "HIGHEST SCORE"
