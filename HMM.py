@@ -88,6 +88,13 @@ class HMM():
 
 
     def predict(self,sent,format_flag=True):
+
+        if len(sent)<3:
+            prediction=[]
+            for i in range(len(sent)):
+                prediction.append("NOUN")
+
+            return prediction
         if format_flag==True:
             org_sent=sent.copy()
 
@@ -182,9 +189,3 @@ class HMM():
         for sent in sents:
             predictions.append(self.predict(sent,format_flag=format_flag))
         return predictions
-
-tagged_corpus=brown.tagged_sents(categories=["adventure"],tagset="universal")
-model=HMM()
-x=["Dan","didn't","want","a","wife","."]
-model.fit(tagged_corpus)
-print(model.predict(x))

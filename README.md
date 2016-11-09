@@ -1,6 +1,8 @@
 # TriHiddenMarkovModel-POS
-# Author: Dang Tran
-# Email: dangtm24@gmail.com
+########################
+Author: Dang Tran
+Email: dangtm24@gmail.com
+########################
 
 This is a python code for TriHMM (Trigram Hidden Markov Model) using for POS (Part-of-speech) Tagging in NLP
 
